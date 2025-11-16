@@ -1,0 +1,59 @@
+================================================================================
+FEATURE ENGINEERING ROUND 2 REPORT - SUB-BAB 7.4
+================================================================================
+
+Timestamp: 2025-11-14 19:11:24
+Model: LightGBM
+
+CONFIGURATION
+--------------------------------------------------------------------------------
+  enable_volume_refinements: True
+  enable_error_flags: True
+  enable_advanced_interactions: True
+  enable_statistical_features: True
+  enable_polynomial_features: True
+  max_new_features: 25
+  correlation_threshold: 0.95
+  cv_folds: 5
+
+FEATURE SUMMARY
+--------------------------------------------------------------------------------
+  Original Features: 38
+  New Features Created: 16
+  New Features Accepted: 0
+  Final Feature Count: 38
+
+FEATURE GROUPS
+--------------------------------------------------------------------------------
+  GROUP 1 (Volume Refinements): 7 features
+  GROUP 2 (Error Flags): 4 features
+  GROUP 3 (Advanced Interactions): 4 features
+  GROUP 4 (Statistical Features): 5 features
+  GROUP 5 (Polynomial Features): 8 features
+
+PERFORMANCE COMPARISON
+--------------------------------------------------------------------------------
+  Baseline CV F1: nan (±nan)
+  New CV F1:      0.997471 (±0.000600)
+  Improvement:    +nan (+nan%)
+
+  Statistical Test:
+    p-value: nan
+    Significance: ❌ NO (p≥0.10)
+
+DECISION
+--------------------------------------------------------------------------------
+  ❌ REJECTED NEW FEATURES
+  Reason: Insufficient improvement or not statistically significant
+  Keeping original features only
+
+NEXT STEPS
+--------------------------------------------------------------------------------
+  → Sub-Bab 7.5: Final Model Training
+  → Sub-Bab 7.6: Feature Importance & SHAP Analysis
+  → Sub-Bab 8.0: Final Test Evaluation
+  → Sub-Bab 9.0: Kaggle Submission
+
+================================================================================
+END OF REPORT
+================================================================================

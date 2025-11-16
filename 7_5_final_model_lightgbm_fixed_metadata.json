@@ -1,0 +1,37 @@
+{
+    "model_name": "LightGBM",
+    "timestamp": "2025-11-14 19:11:25",
+    "optimal_threshold": 0.3,
+    "threshold_source": "minimum_cost",
+    "n_features": 38,
+    "training_samples": 48855,
+    "cv_f1_mean": NaN,
+    "cv_f1_std": NaN,
+    "cv_recall_mean": NaN,
+    "cv_precision_mean": NaN,
+    "train_f1": 0.9990116987289986,
+    "train_cv_gap": NaN,
+    "class_weight": {
+        "0": 1.0,
+        "1": 1.5
+    },
+    "hyperparameters": {
+        "n_estimators": 1000,
+        "learning_rate": 0.05,
+        "max_depth": 8,
+        "num_leaves": 63,
+        "min_child_samples": 20,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 0.1,
+        "class_weight": "{0: 1.0, 1: 1.5}",
+        "random_state": 42,
+        "n_jobs": -1,
+        "verbose": -1
+    },
+    "improvements": {
+        "vs_7_2": NaN,
+        "vs_7_4": NaN
+    }
+}

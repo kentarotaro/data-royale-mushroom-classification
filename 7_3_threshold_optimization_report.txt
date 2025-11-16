@@ -1,0 +1,68 @@
+================================================================================
+THRESHOLD OPTIMIZATION REPORT - SUB-BAB 7.3
+================================================================================
+
+Model: LightGBM
+Date: 2025-11-14 19:09:08
+
+CONFIGURATION
+--------------------------------------------------------------------------------
+Threshold Search Range: [0.3, 0.7]
+Step Size: 0.01
+CV Folds: 5
+Cost Matrix: FN=100.0, FP=1.0 (Ratio 100.0:1)
+
+OPTIMAL THRESHOLD
+--------------------------------------------------------------------------------
+Selected Threshold: 0.300
+Selection Criterion: Minimum Cost (Safety-Oriented)
+
+TEST SET PERFORMANCE COMPARISON
+--------------------------------------------------------------------------------
+Metric                    Baseline (0.5)       Optimal              Change         
+--------------------------------------------------------------------------------
+F1-Score                  0.997584             0.997702             +0.000118
+Recall                    0.996781             0.998390             +0.001610
+Precision                 0.998388             0.997015             -0.001373
+Accuracy                  0.997851             0.997953             +0.000102
+--------------------------------------------------------------------------------
+False Negatives           14                   7                    -7
+False Positives           7                    13                   +6
+True Negatives            5415                 5409                 -6
+True Positives            4335                 4342                 +7
+--------------------------------------------------------------------------------
+Total Cost                1407.00              713.00               +694.00
+Cost Reduction %          0.00                 49.32                +49.32
+
+DECISION RECOMMENDATION
+--------------------------------------------------------------------------------
+Decision: ✅ STRONGLY RECOMMEND ADOPTION
+Confidence: HIGH
+Decision Score: 3/3
+
+IMPLEMENTATION GUIDANCE
+--------------------------------------------------------------------------------
+If adopting optimal threshold:
+  1. Update prediction code:
+     y_pred = (y_proba >= 0.300).astype(int)
+  2. Monitor FN rate (target: <= 7)
+  3. Monitor F1-Score (target: >= 0.9977)
+  4. Track total cost (target: <= 713.00)
+
+IDENTIFIED RISKS
+--------------------------------------------------------------------------------
+  1. ⚠️  F1 improvement < 0.1% - marginal practical benefit
+  2. 🟡 False Positives increased by 85.7%
+  3. 🔴 Threshold at search boundary - may not be true optimum
+
+NEXT STEPS
+--------------------------------------------------------------------------------
+  → Sub-Bab 7.4: Feature Engineering (if needed)
+  → Sub-Bab 7.5: Final Model Training
+  → Sub-Bab 7.6: Feature Importance & SHAP
+  → Sub-Bab 8.0: Final Test Evaluation
+  → Sub-Bab 9.0: Kaggle Submission
+
+================================================================================
+END OF REPORT
+================================================================================

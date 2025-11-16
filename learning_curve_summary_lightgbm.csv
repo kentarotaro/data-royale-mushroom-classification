@@ -1,0 +1,2 @@
+model,final_train_score,final_val_score,final_gap,overfitting_severity,performance_level,convergence_status,variance_at_100pct,readiness_score,verdict
+LightGBM,1.0,0.9972689279108937,0.002731072089106279,NONE,OUTSTANDING,Converged,0.0005377522300559597,100,READY FOR DEPLOYMENT
